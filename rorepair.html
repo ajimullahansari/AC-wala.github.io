@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best RO repair service in Kanpur. Get expert water purifier repair, filter change, and maintenance at affordable prices. Call now!">
+    <meta name="keywords" content="RO repair Kanpur, water purifier service, RO filter change, RO maintenance, RO installation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Acwala.com">
+    <!-- Open Graph for Facebook & WhatsApp -->
+    <meta property="og:title" content="RO Repair in Kanpur | Expert Water Purifier Service">
+    <meta property="og:description" content="Need RO repair in Kanpur? Get fast & reliable water purifier service. Call now!">
+    <meta property="og:image" content="https://acwala.com/images/ro-repair.jpg">
+    <meta property="og:url" content="https://acwala.com/rorepair.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://acwala.com/rorepair.html">
+    <title>RO Repair & Service | Affordable Maintenance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #42d95d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 3.5cm;
+            width: 1.8cm;
+        }
+        .header-buttons button {
+            background: rgb(220, 71, 71);
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            border-radius: 10px;
+            margin-block: .1cm;
+        }
+        .header-buttons button:hover {
+            background: #0056b3;
+            color: white;
+        }
+        section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #location-check input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #location-check button {
+            padding: 10px 15px;
+            background: #ff0c0c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        #location-check button:hover {
+            background: #0056b3;
+        }
+        form input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button {
+            background: #4bd628;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #06a342;
+            color: white;
+            margin-top: 20px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        #book-service input, 
+#book-service textarea {
+    width: calc(100% - 30px);
+    padding: 14px;
+    border: 2px solid #2bc635;
+    border-radius: 6px;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 12px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#book-service input:focus, 
+#book-service textarea:focus {
+    border-color: #23c754;
+    box-shadow: 0 0 5px rgba(27, 190, 84, 0.5);
+    transition: 0.3s ease-in-out;
+}
+#location-check{
+    font-size: large;
+    text-align: center;
+}
+#about{
+    font-size: large;
+    text-align: center;
+}
+#services{
+    font-size: large;
+    text-align: center;
+}
+#pricing{
+    text-align: center;
+    font-size: large;
+}
+#book-service{
+    font-size: large;
+    text-align: center;
+}
+#faq{
+    text-align: center;
+    font-size: large;
+}
+    </style>
+    <!-- Desktop Browsers ke liye Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images\web-app-manifest-192x192.png">
+
+<!-- Mobile (Android) ke liye -->
+<link rel="icon" type="image/png" sizes="192x192" href="images\android-chrome-192x192.png">
+
+<!-- iPhone aur iPad ke liye -->
+<link rel="apple-touch-icon" sizes="180x180" href="images\apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images\logo.png" alt="Company Logo" width="100">
+        </div>
+        <h1>Best RO Repair Service in Your City</h1>
+        <div class="header-buttons">
+            <button onclick="goHome()">Home</button>
+            <button onclick="callNow()">Call Now</button>
+        </div>
+    </header>
+
+    <section id="location-check">
+        <h2>Check Service Availability</h2>
+        <input type="text" placeholder="Enter your pin code" id="pinCode">
+        <button onclick="checkAvailability()">Check</button>
+        <p id="availabilityResult"></p>
+    </section>
+    <section id="about" class="about">
+        <h2>About Our RO Repair Service</h2>
+        <p>11+ years of expert RO repair service. Serving areas across Your City.</p>
+        <img src="images\RO Repair.png" alt="RO Repair Service">
+    </section>
+
+    <section id="services">
+        <h2>Our RO Repair Services</h2>
+        <ul>
+            <li>✅ RO Installation & Uninstallation</li>
+            <li>✅ RO Water Leakage Fixing</li>
+            <li>✅ RO Water Not Purifying Issue</li>
+            <li>✅ RO Motor & Pump Repair</li>
+            <li>✅ RO Filter & Membrane Replacement</li>
+            <li>✅ Water Taste Issue Fixing</li>
+        </ul>
+        <img src="images\RO-repair 2.jpg" alt="RO Repair Service">
+    </section>
+
+    <section id="pricing">
+        <h2>Estimated Cost Calculator</h2>
+        <select id="serviceType" onchange="updateCost()">
+            <option value="basic">Basic Repair – ₹500-₹1000</option>
+            <option value="filter">Filter Replacement – ₹800-₹1500</option>
+            <option value="full">Full Servicing – ₹2000-₹4000</option>
+        </select>
+        <p id="estimatedCost">Select a service to see estimated cost.</p>
+    </section>
+    <section id="book-service">
+        <h2>Book a Service</h2>
+        <form onsubmit="bookService(event)">
+            <input type="text" id="userName" placeholder="Your Name" required>
+            <input type="text" id="userPhone" placeholder="Your Contact Number" required>
+            <textarea id="userIssue" placeholder="Describe Your Issue" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(0)">1️⃣How often should I service my RO purifier?</h3>
+            <p class="answer" id="answer0" style="display: none;">It is recommended to service your RO water purifier every 3 to 6 months for optimal performance.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(1)">2️⃣What are the common signs that my RO needs repair?</h3>
+            <p class="answer" style="display: none;">Some common signs include reduced water flow, unusual taste or odor, leakage, and unusual noises from the system.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(2)">3️⃣How long does an RO filter last?</h3>
+            <p class="answer" style="display: none;">On average, RO filters should be replaced every 6 to 12 months, depending on water quality and usage.</p>
+        </div>
+    </section>
+    
+    <script>
+        function toggleAnswer(index) {
+            var answers = document.querySelectorAll(".faq-item p");
+            if (answers[index].style.display === "none") {
+                answers[index].style.display = "block";
+            } else {
+                answers[index].style.display = "none";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 RO Repair Service. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+        function callNow() {
+            window.location.href = 'tel:+919999999999';
+        }
+        function checkAvailability() {
+            const pinCode = document.getElementById("pinCode").value;
+            const result = document.getElementById("availabilityResult");
+            if (pinCode === "208001") {
+                result.innerText = "Service Available in Your Area!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Sorry, Service Not Available in Your Area.";
+                result.style.color = "red";
+            }
+        }
+        function updateCost() {
+            const serviceType = document.getElementById("serviceType").value;
+            const cost = document.getElementById("estimatedCost");
+            if (serviceType === "basic") cost.innerText = "Estimated Cost: ₹500-₹1000";
+            else if (serviceType === "filter") cost.innerText = "Estimated Cost: ₹800-₹1500";
+            else cost.innerText = "Estimated Cost: ₹2000-₹4000";
+        }
+        function bookService(event) {
+            event.preventDefault();
+            alert("Your service request has been submitted successfully!");
+        }
+        function bookService(event) {
+    event.preventDefault(); // ❌ Page reload hone se roke
+
+    // 🔹 User Inputs fetch karein
+    let name = document.getElementById("userName").value;
+    let phone = document.getElementById("userPhone").value;
+    let issue = document.getElementById("userIssue").value;
+
+    // 🔹 WhatsApp ke liye message format karein
+    let message = `Hello, I am ${name}. My contact number is ${phone}. I need service for: ${issue}. Please assist me.`;
+
+    // 🔹 Owner ka WhatsApp number (India ke liye +91 zaroori hai)
+    let whatsappNumber = "919792635131"; // ✅ Owner ka actual WhatsApp number
+
+    // 🔹 WhatsApp API link create karein
+    let url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    // 🔹 WhatsApp open karein
+    window.open(url, "_blank");
+}
+    </script>
+</body>
+</html>

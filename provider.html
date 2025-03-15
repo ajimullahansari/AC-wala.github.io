@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .provider-card { border: 2px solid #ddd; padding: 20px; width: 300px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .provider-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+        .verified { color: green; font-weight: bold; }
+        .not-verified { color: red; font-weight: bold; }
+        .provider-card img {
+            width:200px;  /* Pehle 100px tha, ab 150px kar diya */
+            height: 270px; /* Pehle 100px tha, ab 150px kar diya */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+      }
+
+    </style>
+    <!-- Desktop Browsers ke liye Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images\web-app-manifest-192x192.png">
+
+<!-- Mobile (Android) ke liye -->
+<link rel="icon" type="image/png" sizes="192x192" href="images\android-chrome-192x192.png">
+
+<!-- iPhone aur iPad ke liye -->
+<link rel="apple-touch-icon" sizes="180x180" href="images\apple-touch-icon.png">
+</head>
+<body>
+    <h1>🔍 Verify Service Provider</h1>
+    <div id="providerInfo"></div>
+
+    <script>
+        // ✅ Sample Provider Data with Image URL
+        const providers = {
+            "ACM101": { name: "Mohd Mujeeb Ansari", role: "AC & Fridge Repair and,\n RO Water Purifier Repair Expert\n serve more than 11+ years", status: "✅ Verified", img: "images/mujeeb.jpeg" },
+            "ACM102": { name: "Himanshu Srivastava", role: "AC & Fridge Repair and,\n RO Water Purifier Repair   Expert", status: "✅ Verified", img: "images/mujeeb.jpeg" },
+            "ACM103": { name: "Rahul Kumar", role: "AC & Fridge Repair and,\n RO Water Purifier Repair Expert", status: "✅ Verified", img: "images/mujeeb.jpeg" }
+        };
+
+        // ✅ URL se ID Fetch Karna
+        const urlParams = new URLSearchParams(window.location.search);
+        const providerId = urlParams.get("id");
+
+        // ✅ HTML Element Fetch Karna
+        const providerInfo = document.getElementById("providerInfo");
+
+        // ✅ Agar ID nahi hai toh message show kare
+        if (!providerId) {
+            providerInfo.innerHTML = `<p class="not-verified">⚠️ Please enter a valid provider ID.</p>`;
+        } 
+        // ✅ Agar ID match karti hai toh details + image show kare
+        else if (providers[providerId]) {
+            providerInfo.innerHTML = `
+                <div class="provider-card">
+                    <img src="${providers[providerId].img}" alt="${providers[providerId].name}">
+                    <h2>${providers[providerId].name}</h2>
+                    <p>📌 Role: ${providers[providerId].role}</p>
+                    <p class="verified">${providers[providerId].status}</p>
+                </div>
+            `;
+        } 
+        // ✅ Agar ID galat hai toh "Invalid Provider ID" show kare
+        else {
+            providerInfo.innerHTML = `<p class="not-verified">❌ Invalid Provider ID</p>`;
+        }
+    </script>
+</body>
+</html>
